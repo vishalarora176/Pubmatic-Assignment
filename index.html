@@ -41,14 +41,14 @@
         if(id == "LAST_UPDATED") {
             countInput = document.getElementById('lastUpdatedCountInput');
             tagInput = document.getElementById('lastUpdatedTagInput');
-//            service.getLastUpdatedData(countInput.value, tagInput.value);
+            service.getLastUpdatedData(countInput.value, tagInput.value);
         }
         else if(id == "LAST_EXECUTED") {
             countInput = document.getElementById('lastExecutedCountInput');
             tagInput = document.getElementById('lastExecutedTagInput');
+            service.getLastExecutedData(countInput.value, tagInput.value);
         }
 
-        service.getLastExecutedData(countInput.value, tagInput.value);
     }
 
     function populateUI(data) {
