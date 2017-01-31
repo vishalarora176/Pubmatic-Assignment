@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="js/service.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+
+<h3>Enter the number and filter tag of the items you want to view and click the corresponding button</h3>
+<table>
+    <tr>
+        <td><input type="text" id="lastUpdatedCountInput" placeholder="Count"/></td>
+        <td><input type="text" id="lastUpdatedTagInput" placeholder="this/that/other"/></td>
+        <td><button id="lastUpdatedButton" onclick="getData(event)" data-id = "LAST_UPDATED">Get Last Updated Data</button></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="lastExecutedCountInput" placeholder="Count"/></td>
+        <td><input type="text" id="lastExecutedTagInput" placeholder="this/that/other"/></td>
+        <td><button id="lastExecutedButton" onclick="getData(event)" data-id = "LAST_EXECUTED">Get Last Executed Data</button></td>
+    </tr>
+</table>
+
+
+
+    <div id="container"></div>
+
+</body>
+
+<script>
+    function getData(e) {
+
+        var id = e.target.dataset.id;
+
+        var countInput;
+        var tagInput;
+
+        if(id == "LAST_UPDATED") {
+            countInput = document.getElementById('lastUpdatedCountInput');
+            tagInput = document.getElementById('lastUpdatedTagInput');
+//            service.getLastUpdatedData(countInput.value, tagInput.value);
+        }
+        else if(id == "LAST_EXECUTED") {
+            countInput = document.getElementById('lastExecutedCountInput');
+            tagInput = document.getElementById('lastExecutedTagInput');
+        }
+
+        service.getLastExecutedData(countInput.value, tagInput.value);
+    }
+
+    function populateUI(data) {
+
+        var container = document.getElementById('container');
+        container.innerHTML = "";
+
+        var table = "";
+
+        var table = '<table>'+
+                        '<thead>'+
+                            '<tr>'+
+                                '<td>ID</td>'+
+                                '<td>Name</td>'+
+                                '<td>Updated</td>'+
+                                '<td>Last Executed</td>'+
+                                '<td>Tags</td>'+
+                            '<tr>'+
+                        '</thead>';
+        for(var i = 0; i < data.length; i++) {
+            table += '<tr>'+
+                        '<td>'+data[i].id+'</td>'+
+                        '<td>'+data[i].name+'</td>'+
+                        '<td>'+data[i].datetimes["updated"]+'</td>'+
+                        '<td>'+data[i].datetimes["last executed"]+'</td>'+
+                        '<td>'+data[i].tags+'</td>'+
+                    '<tr>';
+        }
+        table += '</table>';
+
+        container.innerHTML = table;
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+[ {
+  "id": 1,
+  "name": "Client ABC",
+  "price": 12.50,
+  "datetimes":{
+    "updated":"2016-01-01T23:28:56.782Z",
+    "last executed":"2016-04-01T23:29:11.045Z"
+  },
+  "tags": ["other"]
+},
+  {
+    "id": 2,
+    "name": "Client BCD",
+    "price": 8.56,
+    "datetimes":{
+      "updated":"2016-01-01T23:27:56.782Z",
+      "last executed":"2016-04-01T23:26:11.045Z"
+    },
+    "tags": ["this", "that", "other"]
+  },
+  {
+    "id": 3,
+    "name": "Client DEF",
+    "price": 12.50,
+    "datetimes":{
+      "updated":"2016-01-01T21:26:56.782Z",
+      "last executed":"2016-04-01T23:29:11.045Z"
+    },
+    "tags": ["that"]
+  },
+  {
+    "id": 4,
+    "name": "Client GHI",
+    "price": 12.50,
+    "datetimes":{
+      "updated":"2016-01-01T23:25:56.782Z",
+      "last executed":"2016-04-01T23:23:11.045Z"
+    },
+    "tags": ["other"]
+  },
+  {
+    "id": 5,
+    "name": "Client XYZ",
+    "price": 12.50,
+    "datetimes":{
+      "updated":"2016-01-01T23:21:56.782Z",
+      "last executed":"2016-04-01T23:18:11.045Z"
+    },
+    "tags": ["this", "other"]
+  },
+  {
+    "id": 6,
+    "name": "Client JKL",
+    "price": 12.50,
+    "datetimes":{
+      "updated":"2015-01-01T23:18:56.782Z",
+      "last executed":"2016-04-01T23:19:11.045Z"
+    },
+    "tags": ["that", "other"]
+  },
+  {
+    "id": 7,
+    "name": "Client MNO",
+    "price": 12.50,
+    "datetimes":{
+      "updated":"2016-01-01T23:23:56.782Z",
+      "last executed":"2016-04-01T23:40:11.045Z"
+    },
+    "tags": ["this"]
+  }
+]
